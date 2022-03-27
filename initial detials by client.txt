@@ -1,0 +1,145 @@
+[12/29/2021 6:04:27 AM] Adi I: Hi Please find the inputs for the project - Contents-
+A. Intial Requirements
+B. Advaced requirements - next level
+B. Dialog flow
+
+A. Initial High Level Requirement
+
+1. Chat bot purpose is to register Customer Complaiints.
+2. Creating a sample intial web page where a chatbot will appear.
+3. After taking input from the customer, storing and appending the chat info in a csv file.
+4. Seperate line for each cusomer compliant.
+5. All inputs, dialog questions, options to be configurable.
+6. Intial Chatbot button to create new ticket.
+7. Code and environemnt should be in viewable, editable, configuratble. Build of code option using source code. Code to be moved to customer environment or account.
+8. First Intial level requirements will be delivered.
+10. Provision for advanced level to be made.
+11. Suggest any changes based on your experience on the input, flow.
+
+B. advanced Reqquirements (Next level)
+1. Taking intial configuration of the database.
+2. Connecting to database and inserting the values at each instance.
+3. Taking intial configuration of Rest API.
+4. Sending the ticket info on a Rest API.
+5. Taking upates for existing ticket.
+7. Option to change a text input into multiple choice option.
+8. Option to change a multiple choice input to text input.
+9. Presently only Ticket creation is enabled, next options are Update Ticket, create Service
+
+request or any other request.
+
+C. Dialog Flow
+i. Input - Take input - Create Ticket, Update Ticket, Create Service Request) [Presetly only
+
+create Ticket should be enabled].
+1. Input - Option ( Create Ticket )
+1. Input - Take the company name (Text - 50 char)
+2. Input - Take the customer name (Text - 50 char)
+3. Input - Take the customer contact number (Text - 50 char)
+4. Input - Ticket Summary (Text - 100 char)
+5. Input - Take Service Name (Text - 50 char)
+6. Input - Take Device Name (Text - 50 char)
+7. Input - Take Impact (Choice - very high, hign, medium, low, NA) - configurable
+8. Input - Take Urgency (Choice - Critical, Major, Minor , low, NA) - configurable.
+9. Input - Take AssignTo (Text - 50 char)
+10. Input - Date Time creating Ticket (auto)
+11. Input - Ticket category1 (Text - 100 char)
+12. Input - Ticket category2 (Text - 100 char)
+13. Submit - Give Sumbit button.
+14. Ack - Message Thanks for registing compliant.
+15. Close the flow.
+16. Append the CSV file with the new ticket data.
+17. If CSV file does not exist, create a new csv file in a specific folder.
+18. Reset the dialog flow for start.
+
+[12/29/2021 6:09:32 AM] Adi I: 1. Provide an estimate of initial, advanced option, 2. After 4 revisions what will be the charges for each revision. 3. Select the advanced option, which gives an option of multiple revisions initially. let me know in case any more info is required.
+
+[12/29/2021 1:55:42 PM] Samiya Jabbar: Hi. I am chatbot developer
+
+[12/29/2021 1:56:07 PM] Samiya Jabbar: Don't you have an existing website where i can integrate a dialogflow chatbot ?
+
+[12/29/2021 1:57:06 PM] Samiya Jabbar: the task you have mentioned can be done by me.
+
+[12/29/2021 2:39:42 PM] Samiya Jabbar: https://www.youtube.com/channel/UCZhiRLb25utc86RJLQxMMEg
+
+This is my channel. My few samples of previous works are uploaded on it. Please check it
+
+[12/29/2021 9:00:17 PM] Adi I: Thanks i watched your videos. Its good work.
+
+No there is no external or internal website.
+If it will be, it will be an internal website which i will have to develop for this project, assessed using IP address link i think.
+Login creation feature would be added to basic feature.
+In Advanced, there will be connectivity with internal Ldap server for authentication, though i am not sure of that.
+Please provide an estimate for basic and advanced senarios provided.
+Let me know which other types of projects you work on.
+Email your details to adinamdar1@gmail.com
+
+[12/29/2021 9:04:27 PM] Adi I: You will not have access to the environment, as external connectivity is not there.
+So i will have to replicate and develop the environment in the network.
+Lets Start and then see how can we integrate at the end.
+
+
+Slight change in the Project.
+Instead of creating a Ticket, we are craeting a chatbot for Change Request (CR)
+Most of the questions are similar, some format are new. let me know, if there are any questions.
+let keep a call to discuss tomo.
+
+Below is the dialog flow with the questsion.
+Dialog Flow
+1. Helo, Welcome to the Chatbot -
+What you want to do
+Options -> Create Inc, Update Inc, Create SR, Updated SR, Create CR, Update CR, Create WO, Update WO
+
+2. User selects Create CR (presently)
+
+Below are Questions with Options :-
+
+1. Select CR Type you want to create ? Expedieted Normal Emergency No Impact Standard
+
+2. Select is the CR Impact Extensive/Widespread Minor/Localized Moderate/Limited Significant/Large
+
+3. Select the CR Urgency URGENT NORMAL Low
+
+4. Select the CR Risk Level 1 2 3 4 5
+
+5. Is the CR Service Impacting Yes No
+
+6. Select Change Reason Option1 Option2 Option3 Option4
+
+7. Select Info Type Option1 Option2 Option3 Option4
+
+Below are Quesions wih Date format
+8 Give CR Start Date in format DDMMYYYY hh:flag_mm:ss
+9. Give CR End Date in format DDMMYYYY hh:flag_mm:ss
+
+Below are Quesions wih Text format
+10. What is the Company Name Text 50 Char
+11. Give a short CR Summary Text 100 Char
+12. Give a CR Desctiption Text 200 Char
+13. Give your Email Text 50 char
+14. Give Node Name Text 50 char
+15. Provide Info Summary Text 100 char
+16. Provide Info Notes Text 100 char
+17. Provide Node Location Text 50 char
+18. Give your First Name Text 50 char
+19. Give your Last Name Text 50 char
+20. Give the CR Location Text 50 char
+
+Below are questions which are dependent on option that is select in previous step -
+
+21. Select CR Category Option 1 2 3 4
+
+If 1 is selected in the question 21, then options in Question 22 will be 1A, 1B, 1C, 1D. If 2 ins selected in Q21, the options in Q22 should be 2A, 2B,2C,2D. Resepectively .....
+
+22. Select CR Sub Category Option 1A 1B 1C 1D
+
+23. Submit - Give Sumbit button.
+24. Ack - Message Thanks for registing the Change Request. you will receive an acknowledgement soon.
+25. Close the flow.
+26. Append the CSV file with the new ticket data.
+27. If CSV file does not exist, create a new csv file in a specific folder.
+28. Reset the dialog flow for start.
+
+Thats all for the input.
+
+Let me know if you need any further inputs.
